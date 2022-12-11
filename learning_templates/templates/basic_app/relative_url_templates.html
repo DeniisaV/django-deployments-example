@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>WELCOME TO RELATIVE URL TEMPLATES</h1>
+    <a href="{% url 'basic_app:other' %}">THE OTHER PAGE</a>  <!-- ce e intre apostroafe, prima parte trebuie sa coincida cu variabila app_name din fisierul urls.py din basic_app, dupa doua puncte avem ce dorim sa arata, adica valoarea atributului name din lista urlpatterns din urls.py. -->
+    <a href="{% url 'admin:index' %}">LINK TO ADMIN</a> <!-- in fisierul settings.py din folder ul de proiect, in lista INSTALLED_APPS, avem 'django.contrib.admin'. Uneori,trebuie sa facem migrarile ca sa functioneze. Cu comanda python manage.py migrate -->
+    <a href="{% url 'index' %}">LINK TO INDEX!</a>  <!--LINK CATRE INDEX   -->
+  </body>
+</html>
